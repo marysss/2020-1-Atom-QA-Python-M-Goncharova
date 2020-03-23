@@ -18,9 +18,10 @@ def test_dict_sort():
     """Sort of dictionary"""
     dct = dict_creation()
     sorted(dct)
-    assert dct == {"a": "a",
+    with pytest.raises(AssertionError):
+        assert bool(dct == {"a": "a",
                    "b": "b",
-                   "c": "c"}
+                   "c": "c"}) == 0
 
 def test_dict_update():
     """Update key in dictionary"""
