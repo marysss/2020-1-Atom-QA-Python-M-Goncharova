@@ -28,3 +28,4 @@ def test_int_whole(i):
     """Test of int"""
     a = i + 0.1256
     assert int(a) == a//1
+    
